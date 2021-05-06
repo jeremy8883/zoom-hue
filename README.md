@@ -2,7 +2,7 @@
 
 Automatically turn on a philips hue light when you have the Zoom application open.
 
-I've created this app for personal use. I didn't want family talking to me whilst I was in an online meeting. I have a Philips Hue light strip attached to my desk. If it's red, I'm in DND mode.
+I've created this app for personal reasons. I have a Philips Hue light strip attached to my desk. If it's turned on, and red, it warns others in the house that I'm on video.
 
 ## Getting started
 
