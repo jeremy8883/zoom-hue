@@ -1,0 +1,14 @@
+{
+  "name": "zoom-hue",
+  "version": "1.0.0",
+  "description": "Automatically turn on a philips hue light when you're on a zoom call",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Casey",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
