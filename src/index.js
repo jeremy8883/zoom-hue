@@ -5,17 +5,25 @@ const { watchProcess } = require("./watchProcess")
 
 const onMeetingStarted = async () => {
   console.log("You are on air!")
-  await changeLightState(config.lightId, {
-    on: true,
-    ...colors.onAir,
-  })
+  try {
+    await changeLightState(config.lightId, {
+      on: true,
+      ...colors.onAir,
+    })
+  } catch (ex) {
+    console.error(ex)
+  }
 }
 
 const onMeetingEnded = async () => {
   console.log("Meeting ended")
-  await changeLightState(config.lightId, {
-    on: false,
-  })
+  try {
+    await changeLightState(config.lightId, {
+      on: false,
+    })
+  } catch (ex) {
+    console.error(ex)
+  }
 }
 
 ;(async () => {
@@ -25,5 +33,6 @@ const onMeetingEnded = async () => {
   // const info = await getLightInfo(config.lightId)
   // console.log(info)
 
+  console.log("Zoom Hue watcher started")
   await watchProcess("zoom.us", onMeetingStarted, onMeetingEnded)
 })()
