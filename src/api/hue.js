@@ -33,16 +33,21 @@ const hueFetch = async (method, apiPath, options) => {
   return await adaptResponse(resp)
 }
 
+const getAllLights = async () => {
+  return await hueFetch("GET", `/lights`)
+}
+
 const getLightInfo = async (id) => {
   return await hueFetch("GET", `/lights/${id}`)
 }
 
 /**
+ * More info http://www.burgestrand.se/hue-api/api/lights/
  * @param state {
  *   on?: boolean,
- *   sat?: number,
- *   bri?: number,
- *   hue?: number,
+ *   sat?: number, - saturation, in range 0 - 254.
+ *   bri?: number, - brightness, in range 0 - 254. 0 is not off
+ *   hue?: number, - hue, in range 0 - 65535
  * }
  */
 const changeLightState = async (id, state) => {
@@ -52,6 +57,7 @@ const changeLightState = async (id, state) => {
 }
 
 module.exports = {
+  getAllLights,
   getLightInfo,
   changeLightState,
 }
