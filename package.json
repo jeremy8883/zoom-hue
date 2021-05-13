@@ -8,6 +8,7 @@
     "toggle": "node ./otherScripts/toggle.js",
     "list": "node ./otherScripts/list.js",
     "info": "node ./otherScripts/info.js",
+    "cycle": "node ./otherScripts/cycle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jeremy Casey",

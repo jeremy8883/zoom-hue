@@ -35,5 +35,11 @@ yarn run info
 Turn a light on/off
 
 ```
-yarn run toggle --light 1
+yarn run toggle 1
+```
+
+Cycle through a list of pre-defined colours.
+
+```
+yarn run cycle 1
 ```
