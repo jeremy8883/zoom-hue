@@ -10,6 +10,9 @@ const getRoomNameByLightId = (groups, lightId) => {
   return group ? group.name : "-"
 }
 
+/**
+ * Lists all lights in a table
+ */
 ;(async () => {
   try {
     const lights = await getAllLights()

@@ -1,25 +1,20 @@
-const { changeLightState, getLightInfo } = require("../src/api/hue")
+const { getLightInfo } = require("../src/api/hue")
 const config = require("../.private/config")
 const { getCliArgs } = require("../src/utils/cli")
 
 /**
- * Turn a light on/off
+ * Gets the information for an individual light
  */
 ;(async () => {
   try {
     const argv = getCliArgs()
     const lightId = argv.light != null ? `${argv.light}` : config.lightId
 
+    console.log(`Information for light #${lightId}`)
+
     const lightInfo = await getLightInfo(lightId)
 
-    const turnOn = !lightInfo.state.on
-
-    await changeLightState(lightId, {
-      on: turnOn,
-    })
-    console.log(
-      `Light "${lightInfo.name}" (${lightId}) turned ${turnOn ? "on" : "off"}`
-    )
+    console.log(lightInfo)
   } catch (ex) {
     console.error(ex)
   }

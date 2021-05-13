@@ -27,12 +27,6 @@ const onMeetingEnded = async () => {
 }
 
 ;(async () => {
-  // Debug commands
-  // const allLights = await getAllLights()
-  // console.log(allLights)
-  // const info = await getLightInfo(config.lightId)
-  // console.log(info)
-
   console.log("Zoom Hue watcher started")
   await watchProcess("zoom.us", onMeetingStarted, onMeetingEnded)
 })()

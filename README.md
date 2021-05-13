@@ -26,6 +26,12 @@ List all lights
 yarn run list
 ```
 
+Show detailed information for a single light
+
+```
+yarn run info
+```
+
 Turn a light on/off
 
 ```
