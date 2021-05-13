@@ -1,14 +1,13 @@
 const { getLightInfo } = require("../src/api/hue")
 const config = require("../.private/config")
-const { getCliArgs } = require("../src/utils/cli")
+const { getArgWithDefault } = require("../src/utils/cli")
 
 /**
  * Gets the information for an individual light
  */
 ;(async () => {
   try {
-    const argv = getCliArgs()
-    const lightId = argv.light != null ? `${argv.light}` : config.lightId
+    const lightId = getArgWithDefault(0, config.lightId)
 
     console.log(`Information for light #${lightId}`)
 
