@@ -32,6 +32,9 @@ const getNextState = (lightInfo) => {
     const lightId = getArgWithDefault(0, config.lightId)
 
     const lightInfo = await getLightInfo(lightId)
+    if (!lightInfo.state.reachable) {
+      throw new Error(`Light "${lightInfo.name}" (${lightId}) unreachable`)
+    }
 
     const state = getNextState(lightInfo)
 
