@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node ./src/index.js",
-    "toggleLight": "node ./otherScripts/toggleLight.js",
+    "toggle": "node ./otherScripts/toggle.js",
     "list": "node ./otherScripts/list.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
