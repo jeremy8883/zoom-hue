@@ -34,11 +34,11 @@ const hueFetch = async (method, apiPath, options) => {
 }
 
 const getAllLights = async () => {
-  return await hueFetch("GET", `/lights`)
+  return (await hueFetch("GET", `/lights`)).data
 }
 
 const getLightInfo = async (id) => {
-  return await hueFetch("GET", `/lights/${id}`)
+  return (await hueFetch("GET", `/lights/${id}`)).data
 }
 
 /**
@@ -51,9 +51,11 @@ const getLightInfo = async (id) => {
  * }
  */
 const changeLightState = async (id, state) => {
-  return await hueFetch("PUT", `/lights/${id}/state`, {
-    body: JSON.stringify(state),
-  })
+  return (
+    await hueFetch("PUT", `/lights/${id}/state`, {
+      body: JSON.stringify(state),
+    })
+  ).data
 }
 
 module.exports = {
