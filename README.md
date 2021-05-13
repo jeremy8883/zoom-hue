@@ -17,3 +17,17 @@ Update the config file with your Philips Hue information. More information on ge
 ```
 yarn run start
 ```
+
+## Other scripts
+
+List all lights
+
+```
+yarn run list
+```
+
+Turn a light on/off
+
+```
+yarn run toggle --light 1
+```
