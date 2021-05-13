@@ -37,6 +37,10 @@ const getAllLights = async () => {
   return (await hueFetch("GET", `/lights`)).data
 }
 
+const getAllGroups = async () => {
+  return (await hueFetch("GET", `/groups`)).data
+}
+
 const getLightInfo = async (id) => {
   return (await hueFetch("GET", `/lights/${id}`)).data
 }
@@ -60,6 +64,7 @@ const changeLightState = async (id, state) => {
 
 module.exports = {
   getAllLights,
+  getAllGroups,
   getLightInfo,
   changeLightState,
 }

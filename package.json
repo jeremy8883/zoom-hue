@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node ./src/index.js",
     "toggleLight": "node ./otherScripts/toggleLight.js",
+    "list": "node ./otherScripts/list.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jeremy Casey",
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.1",
-    "ps-list": "^7.2.0"
+    "ps-list": "^7.2.0",
+    "ramda": "^0.27.1"
   }
 }
