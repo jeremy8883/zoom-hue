@@ -4,7 +4,6 @@ const R = require("ramda")
 const getRoomNameByLightId = (groups, lightId) => {
   const [groupId, group] =
     Object.entries(groups).find(([id, room]) => {
-      console.log(room, lightId)
       return room.lights.includes(lightId)
     }) || []
   return group ? group.name : "-"
