@@ -6,7 +6,7 @@ const getRoomNameByLightId = (groups, lightId) => {
     Object.entries(groups).find(([id, room]) => {
       return room.lights.includes(lightId)
     }) || []
-  return group ? group.name : "-"
+  return group ? `${group.name} (${groupId})` : "-"
 }
 
 /**
