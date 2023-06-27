@@ -8,7 +8,7 @@ const states = [
   { bri: 236, hue: 25600, sat: 254 },
   { bri: 236, hue: 15690, sat: 254 },
   { bri: 254, hue: 65527, sat: 253 },
-  { bri: 236, hue: 64952, sat: 170, ct: 176 },
+  { bri: 254, hue: 8418, sat: 140, ct: 366 },
 ]
 
 const getNextState = (lightInfo) => {
